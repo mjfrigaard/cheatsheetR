@@ -1,0 +1,14 @@
+name: dataframes
+title: dataframes
+username:
+account: mjfrigaard
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5441108
+bundleId: 5467432
+url: https://mjfrigaard.shinyapps.io/dataframes/
+when: 1642146541.04585
+lastSyncTime: 1642146541.04595
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: dataframes.html
