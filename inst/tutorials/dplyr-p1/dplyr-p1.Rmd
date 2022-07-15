@@ -22,7 +22,6 @@ library(readxl)
 library(reactable)
 library(writexl)
 library(openxlsx)
-library(fivethirtyeight)
 library(datapasta)
 library(gt)
 library(flextable)
@@ -51,12 +50,55 @@ knitr::opts_chunk$set(
 
 ## The cheatsheet (part 1)
 
-```{r dplyrr-p1.png, echo=FALSE, fig.align='center', out.height='100%', out.width='100%'}
+```{r dplyr-p1.png, echo=FALSE, fig.align='center', out.height='100%', out.width='100%'}
 knitr::include_graphics(path = "www/dplyr-p1.png")
 ```
 
-We've split the Data Transformation cheatsheet into two tutorials. The first tutorial covers page 1 (summarize, group, manipulate)
+<br>
+
+***We've split the Data Transformation cheatsheet into two tutorials. This tutorial covers page 1 (summarize, group, manipulate).***
+
+<br>
+
+Below we install and load the packages:
+
+<br>
+
+```{r packages, eval=FALSE}
+install.packages(c("dplyr", "tibble"))
+library(dplyr)
+library(tibble)
+```
+
+## Tidy data & Pipes
 
 > "`dplyr` functions work with pipes and expect tidy data.*
 
-> ***The front page of this cheatsheet provides an overview of `tibbles` and reshaping tidy data.***"
+There are three main tenets of tidy data:
+
+1. Each column contains a single **variable**  
+2. Each row contains a single **observation**  
+3. **Values** are at the intersection of variables and observations  
+
+```{r tidy-data, echo=FALSE, fig.align='center', out.height='65%', out.width='65%'}
+knitr::include_graphics(path = "www/tidy-data.png")
+```
+
+We'll cover tidy data in more depth in the [`tidyr` tutorial](https://mjfrigaard.github.io/cheatsheetR/tutorials/tidyr-p1.html), but we recommend reading the [original paper by Hadley Wickham](https://doi.org/10.18637/jss.v059.i10). 
+
+### `%>%` or `|>`
+
+The pipe 
+
+
+## Summarise Cases  
+
+## Group Cases 
+
+## Manipulate Cases 
+
+## Manipulate Variables  
+
+
+
+
