@@ -86,10 +86,69 @@ knitr::include_graphics(path = "www/tidy-data.png")
 
 We'll cover tidy data in more depth in the [`tidyr` tutorial](https://mjfrigaard.github.io/cheatsheetR/tutorials/tidyr-p1.html), but we recommend reading the [original paper by Hadley Wickham](https://doi.org/10.18637/jss.v059.i10). 
 
-### `%>%` or `|>`
+### Pipes 
 
-The pipe 
+```{r pipes, echo=FALSE, fig.align='center', out.height='45%', out.width='45%'}
+knitr::include_graphics(path = "www/pipes.png")
+```
 
+Pipes are an example of [syntactic sugar](https://www.techopedia.com/definition/10212/syntactic-sugar#:~:text), which are "*syntax changes in computer programming which make it easier for humans to code.*" R is a functional programming language, so before the pipe we would write *nested* function calls. 
+
+Imagine we want to apply a function (`first_function()`) to an object (`x`) which returns  `y` as the output, but then we want to apply a second function (`second_function()`) to `y`? Without pipes, we would have to assign the output from each function to it's own object:
+
+```r
+y <- first_function(x)
+z <- second_function(y)
+z
+# [1] output
+```
+
+Or we would have to nest the function calls:
+
+```r
+second_function(first_function(x), y)
+```
+
+As you can see, the first option clutters up our working environment with intermediate values, and the second options forces us to read the function *from the inside out*. 
+
+Pipes solve this problem by allowing us to 'pipe' the output from one function into subsequent functions:
+
+```r
+x %>% # original input
+  first_function() %>% # output from first function
+  second_function(y) # output from first and second functions
+```
+
+#### `%>%` or `|>`?
+
+The cheatsheet examples use the pipe provided by the `magrittr` package, `%>%` (the `magrittr` pipe is imported as part of the `tidyverse`). As of 2021, R [version 4.1.0](https://stat.ethz.ch/pipermail/r-announce/2021/000670.html) (codename "Camp Pontanezen") was released with a native pipe (`|>`). We're going to demonstrate using both because of reasons [better explained elsewhere.](https://r4ds.hadley.nz/workflow-pipes.html#vs) The important thing to understand about pipes is how they restructure multiple function calls.
+
+Use the code block below to experiment with pipes: 
+
+```{r prepare-pipes, echo=FALSE}
+x <- c(8.3, 3.14, 28.0001, 11.75)
+```
+
+
+```{r test-pipes, exercise=TRUE, exercise.lines=10, exercise.setup="prepare-pipes"}
+# view x
+
+# use %>% to get the mean() of x
+
+# use |> to get the mean() of x
+
+# use %>% to get the mean() and round() the output to 1 digit
+
+# use |> to get the mean() and round() the output to 1 digit
+
+```
+
+
+If you're using RStudio, you can set which pipe you'd like to use under **Tools** > **Global Options** > **Code**: *Use native pipe operator |> (requires R 4.1+*) 
+
+```{r set-pipe, echo=FALSE, fig.align='center', out.height='80%', out.width='80%'}
+knitr::include_graphics(path = "www/set-pipe.png")
+```
 
 ## Summarise Cases  
 
