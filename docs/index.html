@@ -64,13 +64,13 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="cheatsheetR">cheatsheet<code>r</code>
-<a class="anchor" aria-label="anchor" href="#cheatsheetR"></a>
+<div class="page-header"><h1 id="cheatsheetr">cheatsheet<code>R</code>
+<a class="anchor" aria-label="anchor" href="#cheatsheetr"></a>
 </h1></div>
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 </div>
 <div class="section level1">
-<h1 id="welcome-to-cheatsheetR">Welcome to <code>cheatsheetR</code>!<a class="anchor" aria-label="anchor" href="#welcome-to-cheatsheetR"></a>
+<h1 id="welcome-to-cheatsheetr">Welcome to <code>cheatsheetR</code>!<a class="anchor" aria-label="anchor" href="#welcome-to-cheatsheetr"></a>
 </h1>
 <!-- badges: start -->
 <!-- badges: end -->
@@ -99,33 +99,77 @@
 </h1>
 <p>Below are the tutorials based on the cheatsheet contents.</p>
 <div class="section level2">
-<h2 id="import">Import<a class="anchor" aria-label="anchor" href="#import"></a>
+<h2 id="data-import-with-readr-readxl-and-googlesheets4">Data import with <code>readr</code>, <code>readxl</code>, and <code>googlesheets4</code>
+<a class="anchor" aria-label="anchor" href="#data-import-with-readr-readxl-and-googlesheets4"></a>
 </h2>
-<p>These exercises cover the <strong>Data import with <code>readr</code>, <code>readxl</code>, and <code>googlesheets4</code> cheatsheet</strong> cheatsheet. Download it <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf" class="external-link">here</a>.</p>
-<p><img src="reference/figures/import-side-by-side.png" width="100%" height="100%"></p>
+<p>These exercises cover importing data with the <strong><code>readr</code>, <code>readxl</code>,</strong> and <strong><code>googlesheets4</code></strong> packages. Download the cheatsheet as a PDF <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf" class="external-link">here</a>.</p>
+<p><img src="reference/figures/import-side-by-side.png" width="100%" height="100%" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## run local</span></span>
 <span><span class="fu">learnr</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/learnr/reference/run_tutorial.html" class="external-link">run_tutorial</a></span><span class="op">(</span><span class="st">"import"</span>, package <span class="op">=</span> <span class="st">"cheatsheetR"</span><span class="op">)</span></span></code></pre></div>
 <p><a href="https://mjfrigaard.shinyapps.io/import/" class="external-link">Click here</a> to run in your browser.</p>
 </div>
 <div class="section level2">
+<h2 id="data-transformation-with-dplyr">Data transformation with <code>dplyr</code>
+<a class="anchor" aria-label="anchor" href="#data-transformation-with-dplyr"></a>
+</h2>
+<p>These exercises cover the <a href="https://dplyr.tidyverse.org/" class="external-link"><code>dplyr</code> package</a>. <code>dplyr</code> provides a comprehensive ’<em>grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges</em>”. Download the cheatsheet as PDF <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf" class="external-link">here</a>.</p>
+<p>The examples in the <code>dplyr</code> cheatsheet have been split into two tutorials:</p>
+<div class="section level3">
+<h3 id="part-1-in-development">Part 1 (<em>in development</em>)<a class="anchor" aria-label="anchor" href="#part-1-in-development"></a>
+</h3>
+<p>This tutorial covers tidy data, pipes, summarizing, grouping, and manipulating cases (and manipulating variables!).</p>
+<p><img src="reference/figures/dplyr-p1.png" width="80%" height="80%" style="display: block; margin: auto;"></p>
+</div>
+<div class="section level3">
+<h3 id="part-2-coming-soon">Part 2 (<em>coming soon!</em>)<a class="anchor" aria-label="anchor" href="#part-2-coming-soon"></a>
+</h3>
+<p>This tutorial covers vectorized and summary functions to use for manipulation and summarizing, dealing with row names, and combining tables with joins.</p>
+<p><img src="reference/figures/dplyr-p2.png" width="80%" height="80%" style="display: block; margin: auto;"></p>
+</div>
+</div>
+<div class="section level2">
 <h2 id="tidy">Tidy<a class="anchor" aria-label="anchor" href="#tidy"></a>
 </h2>
 <p>The <strong>Data tidying with <code>tidyr</code> cheatsheet</strong> is broken into two parts. Read more about the <a href="https://tidyr.tidyverse.org/" class="external-link"><code>tidyr</code> package</a>, which is designed to <em>help you create tidy data.</em> Download the cheatsheet <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf" class="external-link">here</a>.</p>
+<p>We’ve split the examples on the cheatsheet into two tutorials:</p>
 <div class="section level3">
 <h3 id="part-1">Part 1<a class="anchor" aria-label="anchor" href="#part-1"></a>
 </h3>
-<p><img src="reference/figures/tidyr-p1.png" width="100%" height="100%" style="display: block; margin: auto;"></p>
+<p>These exercises cover an overview of <code>tibbles</code> and reshaping tidy data using the <code>pivot_</code> functions, splitting and combining columns, and dealing with missing and incomplete data.</p>
+<p><img src="reference/figures/tidyr-p1.png" width="80%" height="80%" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## run local</span></span>
 <span><span class="fu">learnr</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/learnr/reference/run_tutorial.html" class="external-link">run_tutorial</a></span><span class="op">(</span><span class="st">"tidyr-p1"</span>, package <span class="op">=</span> <span class="st">"cheatsheetR"</span><span class="op">)</span></span></code></pre></div>
 <p><a href="https://mjfrigaard.shinyapps.io/tidyr-p1/" class="external-link">Click here</a> to run in your browser.</p>
 </div>
 <div class="section level3">
+<h3 id="part-2-coming-soon-1">Part 2 (<em>coming soon!</em>)<a class="anchor" aria-label="anchor" href="#part-2-coming-soon-1"></a>
+</h3>
+<p>These exercises cover how to create, reshape, and transform nested data and list-columns with <code>nest()</code>, <code>unnest()</code>, <code>hoist()</code>, and more!</p>
+<p><img src="reference/figures/tidyr-p2.png" width="80%" height="80%" style="display: block; margin: auto;"></p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="data-visualization-with-ggplot2-cheatsheet">Data visualization with <code>ggplot2</code> cheatsheet<a class="anchor" aria-label="anchor" href="#data-visualization-with-ggplot2-cheatsheet"></a>
+</h2>
+<div class="section level3">
+<h3 id="part-1-1">Part 1<a class="anchor" aria-label="anchor" href="#part-1-1"></a>
+</h3>
+<p><img src="reference/figures/ggplot2-p1.png" width="80%" height="80%" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## run local</span></span>
+<span><span class="fu">learnr</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/learnr/reference/run_tutorial.html" class="external-link">run_tutorial</a></span><span class="op">(</span><span class="st">"ggpplot2-p1"</span>, package <span class="op">=</span> <span class="st">"cheatsheetR"</span><span class="op">)</span></span></code></pre></div>
+<p>Click here to run in your browser.</p>
+</div>
+<div class="section level3">
 <h3 id="part-2">Part 2<a class="anchor" aria-label="anchor" href="#part-2"></a>
 </h3>
-<p>Nested data (<em>coming soon!</em>)</p>
-<p><img src="reference/figures/tidyr-p2.png" width="100%" height="100%" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/ggplot2-p2.png" width="80%" height="80%" style="display: block; margin: auto;"></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">## run local</span></span>
+<span><span class="fu">learnr</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/learnr/reference/run_tutorial.html" class="external-link">run_tutorial</a></span><span class="op">(</span><span class="st">"ggpplot2-p2"</span>, package <span class="op">=</span> <span class="st">"cheatsheetR"</span><span class="op">)</span></span></code></pre></div>
+<p>Click here to run in your browser.</p>
 </div>
 </div>
 </div>
@@ -137,7 +181,7 @@
 <h2 id="command-line-intro">Command-line intro<a class="anchor" aria-label="anchor" href="#command-line-intro"></a>
 </h2>
 <p>These exercises don’t come from a cheatsheet, but they do cover some common command-line tools worth knowing.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## run local</span></span>
 <span><span class="fu">learnr</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/learnr/reference/run_tutorial.html" class="external-link">run_tutorial</a></span><span class="op">(</span><span class="st">"commandline"</span>, package <span class="op">=</span> <span class="st">"cheatsheetR"</span><span class="op">)</span></span></code></pre></div>
 <p><a href="https://mjfrigaard.shinyapps.io/command-line/" class="external-link">Click here</a> to run in your browser.</p>
@@ -146,7 +190,7 @@
 <h2 id="atomic-vectors">Atomic vectors<a class="anchor" aria-label="anchor" href="#atomic-vectors"></a>
 </h2>
 <p>This provides a brief introduction to R’s most common object: the vector.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## run local</span></span>
 <span><span class="fu">learnr</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/learnr/reference/run_tutorial.html" class="external-link">run_tutorial</a></span><span class="op">(</span><span class="st">"atomic-vectors"</span>, package <span class="op">=</span> <span class="st">"cheatsheetR"</span><span class="op">)</span></span></code></pre></div>
 <p><a href="https://mjfrigaard.shinyapps.io/atomic-vectors/" class="external-link">Click here</a> to run in your browser.</p>
@@ -155,7 +199,7 @@
 <h2 id="s3-vectors">S3 vectors<a class="anchor" aria-label="anchor" href="#s3-vectors"></a>
 </h2>
 <p>This introduces more complex vectors (factors, dates, date-times and difftimes).</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## run local</span></span>
 <span><span class="fu">learnr</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/learnr/reference/run_tutorial.html" class="external-link">run_tutorial</a></span><span class="op">(</span><span class="st">"S3-vectors"</span>, package <span class="op">=</span> <span class="st">"cheatsheetR"</span><span class="op">)</span></span></code></pre></div>
 <p><a href="https://mjfrigaard.shinyapps.io/S3-vectors/" class="external-link">Click here</a> to run in your browser.</p>
@@ -165,7 +209,7 @@
 <code>data.frame</code>s<a class="anchor" aria-label="anchor" href="#dataframes"></a>
 </h2>
 <p>An introduction to rectangular (spreadsheet) data in R.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## run local</span></span>
 <span><span class="fu">learnr</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/learnr/reference/run_tutorial.html" class="external-link">run_tutorial</a></span><span class="op">(</span><span class="st">"dataframes"</span>, package <span class="op">=</span> <span class="st">"cheatsheetR"</span><span class="op">)</span></span></code></pre></div>
 <p><a href="https://mjfrigaard.shinyapps.io/dataframes/" class="external-link">Click here</a> to run in your browser.</p>
