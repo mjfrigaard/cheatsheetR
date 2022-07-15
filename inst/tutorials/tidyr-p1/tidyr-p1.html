@@ -797,14 +797,14 @@ href="https://stringr.tidyverse.org/reference/str_view.html"><strong><code>strin
 <strong><code>"[[:alnum:]]+"</code></strong> (<em>which matches one or
 more alphanumeric characters</em>):</p>
 <pre class="r"><code>str_view(string = table3$rate, &quot;([[:alnum:]]+)&quot;)</code></pre>
-<div id="htmlwidget-a25e92e3dba74eac4995" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a25e92e3dba74eac4995">{"x":{"html":"<ul>\n  <li><span class='match'>745<\/span>/19987071<\/li>\n  <li><span class='match'>2666<\/span>/20595360<\/li>\n  <li><span class='match'>37737<\/span>/172006362<\/li>\n  <li><span class='match'>80488<\/span>/174504898<\/li>\n  <li><span class='match'>212258<\/span>/1272915272<\/li>\n  <li><span class='match'>213766<\/span>/1280428583<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8110aa4ce74a17ae3cb4" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8110aa4ce74a17ae3cb4">{"x":{"html":"<ul>\n  <li><span class='match'>745<\/span>/19987071<\/li>\n  <li><span class='match'>2666<\/span>/20595360<\/li>\n  <li><span class='match'>37737<\/span>/172006362<\/li>\n  <li><span class='match'>80488<\/span>/174504898<\/li>\n  <li><span class='match'>212258<\/span>/1272915272<\/li>\n  <li><span class='match'>213766<\/span>/1280428583<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
 <p>We can see this pattern matched the numerator in <code>rate</code>.
 When we include the second group:
 <strong><code>"/([[:alnum:]]+)"</code></strong></p>
 <pre class="r"><code>str_view(string = table3$rate, &quot;/([[:alnum:]]+)&quot;)</code></pre>
-<div id="htmlwidget-866c01017236260050ce" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-866c01017236260050ce">{"x":{"html":"<ul>\n  <li>745<span class='match'>/19987071<\/span><\/li>\n  <li>2666<span class='match'>/20595360<\/span><\/li>\n  <li>37737<span class='match'>/172006362<\/span><\/li>\n  <li>80488<span class='match'>/174504898<\/span><\/li>\n  <li>212258<span class='match'>/1272915272<\/span><\/li>\n  <li>213766<span class='match'>/1280428583<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b8f9f9249b0e04767328" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b8f9f9249b0e04767328">{"x":{"html":"<ul>\n  <li>745<span class='match'>/19987071<\/span><\/li>\n  <li>2666<span class='match'>/20595360<\/span><\/li>\n  <li>37737<span class='match'>/172006362<\/span><\/li>\n  <li>80488<span class='match'>/174504898<\/span><\/li>\n  <li>212258<span class='match'>/1272915272<\/span><\/li>\n  <li>213766<span class='match'>/1280428583<\/span><\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>
 <p>We see it’s matching the denominator.</p>
 <p>The full pattern (<code>"([[:alnum:]]+)/([[:alnum:]]+)"</code>)
 creates two groups of numbers (numerator and denominator) and places
@@ -1009,12 +1009,12 @@ data-lines="3">
 <code>tibble</code> using the appropriate functions
 (<code>drop_na()</code>, <code>fill()</code>, or
 <code>replace_na()</code>):</p>
-<div id="csdhomjvgm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="bqkmhkxouy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#csdhomjvgm .gt_table {
+#bqkmhkxouy .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1039,7 +1039,7 @@ data-lines="3">
   border-left-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_heading {
+#bqkmhkxouy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1051,7 +1051,7 @@ data-lines="3">
   border-right-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_title {
+#bqkmhkxouy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1063,7 +1063,7 @@ data-lines="3">
   border-bottom-width: 0;
 }
 
-#csdhomjvgm .gt_subtitle {
+#bqkmhkxouy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1075,13 +1075,13 @@ data-lines="3">
   border-top-width: 0;
 }
 
-#csdhomjvgm .gt_bottom_border {
+#bqkmhkxouy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_col_headings {
+#bqkmhkxouy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1096,7 +1096,7 @@ data-lines="3">
   border-right-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_col_heading {
+#bqkmhkxouy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1116,7 +1116,7 @@ data-lines="3">
   overflow-x: hidden;
 }
 
-#csdhomjvgm .gt_column_spanner_outer {
+#bqkmhkxouy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1128,15 +1128,15 @@ data-lines="3">
   padding-right: 4px;
 }
 
-#csdhomjvgm .gt_column_spanner_outer:first-child {
+#bqkmhkxouy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#csdhomjvgm .gt_column_spanner_outer:last-child {
+#bqkmhkxouy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#csdhomjvgm .gt_column_spanner {
+#bqkmhkxouy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1148,7 +1148,7 @@ data-lines="3">
   width: 100%;
 }
 
-#csdhomjvgm .gt_group_heading {
+#bqkmhkxouy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1173,7 +1173,7 @@ data-lines="3">
   vertical-align: middle;
 }
 
-#csdhomjvgm .gt_empty_group_heading {
+#bqkmhkxouy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1188,15 +1188,15 @@ data-lines="3">
   vertical-align: middle;
 }
 
-#csdhomjvgm .gt_from_md > :first-child {
+#bqkmhkxouy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#csdhomjvgm .gt_from_md > :last-child {
+#bqkmhkxouy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#csdhomjvgm .gt_row {
+#bqkmhkxouy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1215,7 +1215,7 @@ data-lines="3">
   overflow-x: hidden;
 }
 
-#csdhomjvgm .gt_stub {
+#bqkmhkxouy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1228,7 +1228,7 @@ data-lines="3">
   padding-right: 5px;
 }
 
-#csdhomjvgm .gt_stub_row_group {
+#bqkmhkxouy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1242,11 +1242,11 @@ data-lines="3">
   vertical-align: top;
 }
 
-#csdhomjvgm .gt_row_group_first td {
+#bqkmhkxouy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#csdhomjvgm .gt_summary_row {
+#bqkmhkxouy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1256,16 +1256,16 @@ data-lines="3">
   padding-right: 5px;
 }
 
-#csdhomjvgm .gt_first_summary_row {
+#bqkmhkxouy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_first_summary_row.thick {
+#bqkmhkxouy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#csdhomjvgm .gt_last_summary_row {
+#bqkmhkxouy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1275,7 +1275,7 @@ data-lines="3">
   border-bottom-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_grand_summary_row {
+#bqkmhkxouy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1285,7 +1285,7 @@ data-lines="3">
   padding-right: 5px;
 }
 
-#csdhomjvgm .gt_first_grand_summary_row {
+#bqkmhkxouy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1295,11 +1295,11 @@ data-lines="3">
   border-top-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_striped {
+#bqkmhkxouy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#csdhomjvgm .gt_table_body {
+#bqkmhkxouy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1308,7 +1308,7 @@ data-lines="3">
   border-bottom-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_footnotes {
+#bqkmhkxouy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1322,7 +1322,7 @@ data-lines="3">
   border-right-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_footnote {
+#bqkmhkxouy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1331,7 +1331,7 @@ data-lines="3">
   padding-right: 5px;
 }
 
-#csdhomjvgm .gt_sourcenotes {
+#bqkmhkxouy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1345,7 +1345,7 @@ data-lines="3">
   border-right-color: #D3D3D3;
 }
 
-#csdhomjvgm .gt_sourcenote {
+#bqkmhkxouy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1353,36 +1353,36 @@ data-lines="3">
   padding-right: 5px;
 }
 
-#csdhomjvgm .gt_left {
+#bqkmhkxouy .gt_left {
   text-align: left;
 }
 
-#csdhomjvgm .gt_center {
+#bqkmhkxouy .gt_center {
   text-align: center;
 }
 
-#csdhomjvgm .gt_right {
+#bqkmhkxouy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#csdhomjvgm .gt_font_normal {
+#bqkmhkxouy .gt_font_normal {
   font-weight: normal;
 }
 
-#csdhomjvgm .gt_font_bold {
+#bqkmhkxouy .gt_font_bold {
   font-weight: bold;
 }
 
-#csdhomjvgm .gt_font_italic {
+#bqkmhkxouy .gt_font_italic {
   font-style: italic;
 }
 
-#csdhomjvgm .gt_super {
+#bqkmhkxouy .gt_super {
   font-size: 65%;
 }
 
-#csdhomjvgm .gt_two_val_uncert {
+#bqkmhkxouy .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1391,31 +1391,31 @@ data-lines="3">
   margin-left: 0.1em;
 }
 
-#csdhomjvgm .gt_footnote_marks {
+#bqkmhkxouy .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#csdhomjvgm .gt_asterisk {
+#bqkmhkxouy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#csdhomjvgm .gt_slash_mark {
+#bqkmhkxouy .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#csdhomjvgm .gt_fraction_numerator {
+#bqkmhkxouy .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#csdhomjvgm .gt_fraction_denominator {
+#bqkmhkxouy .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -1538,12 +1538,12 @@ converts “<em>implicit missing values into explicit missing
 values.</em>”</p>
 <p>Let’s see how to use complete by looking at the example from the
 cheatsheet, <code>X</code>.</p>
-<div id="bbswgaqojs" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="zzeoewtiga" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bbswgaqojs .gt_table {
+#zzeoewtiga .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1568,7 +1568,7 @@ cheatsheet, <code>X</code>.</p>
   border-left-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_heading {
+#zzeoewtiga .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1580,7 +1580,7 @@ cheatsheet, <code>X</code>.</p>
   border-right-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_title {
+#zzeoewtiga .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1592,7 +1592,7 @@ cheatsheet, <code>X</code>.</p>
   border-bottom-width: 0;
 }
 
-#bbswgaqojs .gt_subtitle {
+#zzeoewtiga .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1604,13 +1604,13 @@ cheatsheet, <code>X</code>.</p>
   border-top-width: 0;
 }
 
-#bbswgaqojs .gt_bottom_border {
+#zzeoewtiga .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_col_headings {
+#zzeoewtiga .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1625,7 +1625,7 @@ cheatsheet, <code>X</code>.</p>
   border-right-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_col_heading {
+#zzeoewtiga .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1645,7 +1645,7 @@ cheatsheet, <code>X</code>.</p>
   overflow-x: hidden;
 }
 
-#bbswgaqojs .gt_column_spanner_outer {
+#zzeoewtiga .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1657,15 +1657,15 @@ cheatsheet, <code>X</code>.</p>
   padding-right: 4px;
 }
 
-#bbswgaqojs .gt_column_spanner_outer:first-child {
+#zzeoewtiga .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bbswgaqojs .gt_column_spanner_outer:last-child {
+#zzeoewtiga .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bbswgaqojs .gt_column_spanner {
+#zzeoewtiga .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1677,7 +1677,7 @@ cheatsheet, <code>X</code>.</p>
   width: 100%;
 }
 
-#bbswgaqojs .gt_group_heading {
+#zzeoewtiga .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1702,7 +1702,7 @@ cheatsheet, <code>X</code>.</p>
   vertical-align: middle;
 }
 
-#bbswgaqojs .gt_empty_group_heading {
+#zzeoewtiga .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1717,15 +1717,15 @@ cheatsheet, <code>X</code>.</p>
   vertical-align: middle;
 }
 
-#bbswgaqojs .gt_from_md > :first-child {
+#zzeoewtiga .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bbswgaqojs .gt_from_md > :last-child {
+#zzeoewtiga .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bbswgaqojs .gt_row {
+#zzeoewtiga .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1744,7 +1744,7 @@ cheatsheet, <code>X</code>.</p>
   overflow-x: hidden;
 }
 
-#bbswgaqojs .gt_stub {
+#zzeoewtiga .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1757,7 +1757,7 @@ cheatsheet, <code>X</code>.</p>
   padding-right: 5px;
 }
 
-#bbswgaqojs .gt_stub_row_group {
+#zzeoewtiga .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1771,11 +1771,11 @@ cheatsheet, <code>X</code>.</p>
   vertical-align: top;
 }
 
-#bbswgaqojs .gt_row_group_first td {
+#zzeoewtiga .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bbswgaqojs .gt_summary_row {
+#zzeoewtiga .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1785,16 +1785,16 @@ cheatsheet, <code>X</code>.</p>
   padding-right: 5px;
 }
 
-#bbswgaqojs .gt_first_summary_row {
+#zzeoewtiga .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_first_summary_row.thick {
+#zzeoewtiga .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bbswgaqojs .gt_last_summary_row {
+#zzeoewtiga .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1804,7 +1804,7 @@ cheatsheet, <code>X</code>.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_grand_summary_row {
+#zzeoewtiga .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1814,7 +1814,7 @@ cheatsheet, <code>X</code>.</p>
   padding-right: 5px;
 }
 
-#bbswgaqojs .gt_first_grand_summary_row {
+#zzeoewtiga .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1824,11 +1824,11 @@ cheatsheet, <code>X</code>.</p>
   border-top-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_striped {
+#zzeoewtiga .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bbswgaqojs .gt_table_body {
+#zzeoewtiga .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1837,7 +1837,7 @@ cheatsheet, <code>X</code>.</p>
   border-bottom-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_footnotes {
+#zzeoewtiga .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1851,7 +1851,7 @@ cheatsheet, <code>X</code>.</p>
   border-right-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_footnote {
+#zzeoewtiga .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1860,7 +1860,7 @@ cheatsheet, <code>X</code>.</p>
   padding-right: 5px;
 }
 
-#bbswgaqojs .gt_sourcenotes {
+#zzeoewtiga .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1874,7 +1874,7 @@ cheatsheet, <code>X</code>.</p>
   border-right-color: #D3D3D3;
 }
 
-#bbswgaqojs .gt_sourcenote {
+#zzeoewtiga .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1882,36 +1882,36 @@ cheatsheet, <code>X</code>.</p>
   padding-right: 5px;
 }
 
-#bbswgaqojs .gt_left {
+#zzeoewtiga .gt_left {
   text-align: left;
 }
 
-#bbswgaqojs .gt_center {
+#zzeoewtiga .gt_center {
   text-align: center;
 }
 
-#bbswgaqojs .gt_right {
+#zzeoewtiga .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bbswgaqojs .gt_font_normal {
+#zzeoewtiga .gt_font_normal {
   font-weight: normal;
 }
 
-#bbswgaqojs .gt_font_bold {
+#zzeoewtiga .gt_font_bold {
   font-weight: bold;
 }
 
-#bbswgaqojs .gt_font_italic {
+#zzeoewtiga .gt_font_italic {
   font-style: italic;
 }
 
-#bbswgaqojs .gt_super {
+#zzeoewtiga .gt_super {
   font-size: 65%;
 }
 
-#bbswgaqojs .gt_two_val_uncert {
+#zzeoewtiga .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1920,31 +1920,31 @@ cheatsheet, <code>X</code>.</p>
   margin-left: 0.1em;
 }
 
-#bbswgaqojs .gt_footnote_marks {
+#zzeoewtiga .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#bbswgaqojs .gt_asterisk {
+#zzeoewtiga .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bbswgaqojs .gt_slash_mark {
+#zzeoewtiga .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#bbswgaqojs .gt_fraction_numerator {
+#zzeoewtiga .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#bbswgaqojs .gt_fraction_denominator {
+#zzeoewtiga .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -1989,12 +1989,12 @@ a tibble with all possible combinations of <code>x1</code> and
 (<code>NA</code>) where the new row was created for the missing
 combination of <code>x1</code> and <code>x2</code>).</p>
 <p>Consider the example data below, <code>hiphop90s</code>:</p>
-<div id="tpgnfnbura" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="cltgsqeydq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#tpgnfnbura .gt_table {
+#cltgsqeydq .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2019,7 +2019,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-left-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_heading {
+#cltgsqeydq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2031,7 +2031,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-right-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_title {
+#cltgsqeydq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2043,7 +2043,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-bottom-width: 0;
 }
 
-#tpgnfnbura .gt_subtitle {
+#cltgsqeydq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2055,13 +2055,13 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-top-width: 0;
 }
 
-#tpgnfnbura .gt_bottom_border {
+#cltgsqeydq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_col_headings {
+#cltgsqeydq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2076,7 +2076,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-right-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_col_heading {
+#cltgsqeydq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2096,7 +2096,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   overflow-x: hidden;
 }
 
-#tpgnfnbura .gt_column_spanner_outer {
+#cltgsqeydq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2108,15 +2108,15 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   padding-right: 4px;
 }
 
-#tpgnfnbura .gt_column_spanner_outer:first-child {
+#cltgsqeydq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tpgnfnbura .gt_column_spanner_outer:last-child {
+#cltgsqeydq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tpgnfnbura .gt_column_spanner {
+#cltgsqeydq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2128,7 +2128,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   width: 100%;
 }
 
-#tpgnfnbura .gt_group_heading {
+#cltgsqeydq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2153,7 +2153,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   vertical-align: middle;
 }
 
-#tpgnfnbura .gt_empty_group_heading {
+#cltgsqeydq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2168,15 +2168,15 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   vertical-align: middle;
 }
 
-#tpgnfnbura .gt_from_md > :first-child {
+#cltgsqeydq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tpgnfnbura .gt_from_md > :last-child {
+#cltgsqeydq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tpgnfnbura .gt_row {
+#cltgsqeydq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2195,7 +2195,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   overflow-x: hidden;
 }
 
-#tpgnfnbura .gt_stub {
+#cltgsqeydq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2208,7 +2208,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   padding-right: 5px;
 }
 
-#tpgnfnbura .gt_stub_row_group {
+#cltgsqeydq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2222,11 +2222,11 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   vertical-align: top;
 }
 
-#tpgnfnbura .gt_row_group_first td {
+#cltgsqeydq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tpgnfnbura .gt_summary_row {
+#cltgsqeydq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2236,16 +2236,16 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   padding-right: 5px;
 }
 
-#tpgnfnbura .gt_first_summary_row {
+#cltgsqeydq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_first_summary_row.thick {
+#cltgsqeydq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tpgnfnbura .gt_last_summary_row {
+#cltgsqeydq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2255,7 +2255,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-bottom-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_grand_summary_row {
+#cltgsqeydq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2265,7 +2265,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   padding-right: 5px;
 }
 
-#tpgnfnbura .gt_first_grand_summary_row {
+#cltgsqeydq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2275,11 +2275,11 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-top-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_striped {
+#cltgsqeydq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tpgnfnbura .gt_table_body {
+#cltgsqeydq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2288,7 +2288,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-bottom-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_footnotes {
+#cltgsqeydq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2302,7 +2302,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-right-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_footnote {
+#cltgsqeydq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -2311,7 +2311,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   padding-right: 5px;
 }
 
-#tpgnfnbura .gt_sourcenotes {
+#cltgsqeydq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2325,7 +2325,7 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   border-right-color: #D3D3D3;
 }
 
-#tpgnfnbura .gt_sourcenote {
+#cltgsqeydq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2333,36 +2333,36 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   padding-right: 5px;
 }
 
-#tpgnfnbura .gt_left {
+#cltgsqeydq .gt_left {
   text-align: left;
 }
 
-#tpgnfnbura .gt_center {
+#cltgsqeydq .gt_center {
   text-align: center;
 }
 
-#tpgnfnbura .gt_right {
+#cltgsqeydq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tpgnfnbura .gt_font_normal {
+#cltgsqeydq .gt_font_normal {
   font-weight: normal;
 }
 
-#tpgnfnbura .gt_font_bold {
+#cltgsqeydq .gt_font_bold {
   font-weight: bold;
 }
 
-#tpgnfnbura .gt_font_italic {
+#cltgsqeydq .gt_font_italic {
   font-style: italic;
 }
 
-#tpgnfnbura .gt_super {
+#cltgsqeydq .gt_super {
   font-size: 65%;
 }
 
-#tpgnfnbura .gt_two_val_uncert {
+#cltgsqeydq .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -2371,31 +2371,31 @@ combination of <code>x1</code> and <code>x2</code>).</p>
   margin-left: 0.1em;
 }
 
-#tpgnfnbura .gt_footnote_marks {
+#cltgsqeydq .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#tpgnfnbura .gt_asterisk {
+#cltgsqeydq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tpgnfnbura .gt_slash_mark {
+#cltgsqeydq .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#tpgnfnbura .gt_fraction_numerator {
+#cltgsqeydq .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#tpgnfnbura .gt_fraction_denominator {
+#cltgsqeydq .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;

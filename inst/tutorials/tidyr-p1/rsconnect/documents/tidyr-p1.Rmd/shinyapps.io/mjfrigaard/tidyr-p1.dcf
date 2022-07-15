@@ -5,10 +5,10 @@ account: mjfrigaard
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6642563
-bundleId: 6098721
+bundleId: 6100315
 url: https://mjfrigaard.shinyapps.io/tidyr-p1/
-when: 1657820009.93155
-lastSyncTime: 1657820009.93156
+when: 1657863639.52866
+lastSyncTime: 1657863639.52867
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: tidyr-p2.html|tidyr-p2.Rmd
+ignoredFiles: tidyr-p1.html
