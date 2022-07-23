@@ -45,8 +45,8 @@ knitr::opts_chunk$set(
   exercise.cap = "dplyr")
 ```
 
-[Link to `dplyr` website](https://dplyr.tidyverse.org/)  
-[Link to cheatsheets](https://www.rstudio.com/resources/cheatsheets/) 
+[Link to `dplyr` website](https://dplyr.tidyverse.org/)\
+[Link to cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
 ## The cheatsheet (part 1)
 
@@ -72,65 +72,59 @@ library(tibble)
 
 ## Tidy data & Pipes
 
-> "`dplyr` functions work with pipes and expect tidy data.*
+> "*`dplyr` functions work with pipes and expect tidy data.*"
 
 There are three main tenets of tidy data:
 
-1. Each column contains a single **variable**  
-2. Each row contains a single **observation**  
-3. **Values** are at the intersection of variables and observations  
+1.  Each column contains a single **variable**\
+2.  Each row contains a single **observation**\
+3.  **Values** are at the intersection of variables and observations
 
 ```{r tidy-data, echo=FALSE, fig.align='center', out.height='65%', out.width='65%'}
 knitr::include_graphics(path = "www/tidy-data.png")
 ```
 
-We'll cover tidy data in more depth in the [`tidyr` tutorial](https://mjfrigaard.github.io/cheatsheetR/tutorials/tidyr-p1.html), but we recommend reading the [original paper by Hadley Wickham](https://doi.org/10.18637/jss.v059.i10). 
+We'll cover tidy data in more depth in the [`tidyr` tutorial](https://mjfrigaard.github.io/cheatsheetR/tutorials/tidyr-p1.html), but we recommend reading the [original paper by Hadley Wickham](https://doi.org/10.18637/jss.v059.i10).
 
-### Pipes 
+### Pipes
 
 ```{r pipes, echo=FALSE, fig.align='center', out.height='45%', out.width='45%'}
 knitr::include_graphics(path = "www/pipes.png")
 ```
 
-Pipes are an example of [syntactic sugar](https://www.techopedia.com/definition/10212/syntactic-sugar#:~:text), which are "*syntax changes in computer programming which make it easier for humans to code.*" R is a functional programming language, so before the pipe we would write *nested* function calls. 
+Pipes are an example of [syntactic sugar](https://www.techopedia.com/definition/10212/syntactic-sugar#:~:text), which are "*syntax changes in computer programming which make it easier for humans to code.*" R is a functional programming language, so before the pipe we would write *nested* function calls.
 
-Imagine we want to apply a function (`first_function()`) to an object (`x`) which returns  `y` as the output, but then we want to apply a second function (`second_function()`) to `y`? Without pipes, we would have to assign the output from each function to it's own object:
+Imagine we want to apply a function (`first_function()`) to an object (`input`) which returns `first_output`, but then we want to apply a second function (`second_function()`) to `first_output` ? Without pipes, we would either have to assign the output from each function to it's own object:
 
-```r
-y <- first_function(x)
-z <- second_function(y)
-z
-# [1] output
+```{r pipe--00, echo=FALSE, fig.align='center', out.height='75%', out.width='75%'}
+knitr::include_graphics(path = "www/pipe-00.png")
 ```
 
 Or we would have to nest the function calls:
 
-```r
-second_function(first_function(x), y)
+```{r pipe–01, echo=FALSE, fig.align='center', out.height='85%', out.width='85%'}
+knitr::include_graphics(path = "www/pipe-01.png")
 ```
 
-As you can see, the first option clutters up our working environment with intermediate values, and the second options forces us to read the function *from the inside out*. 
+As you can see, the first option clutters up our working environment with intermediate values, and the second options forces us to read the function *from the inside out*.
 
 Pipes solve this problem by allowing us to 'pipe' the output from one function into subsequent functions:
 
-```r
-x %>% # original input
-  first_function() %>% # output from first function
-  second_function(y) # output from first and second functions
+```{r pipe–03, echo=FALSE, fig.align='center', out.height='70%', out.width='70%'}
+knitr::include_graphics(path = "www/pipe-03.png")
 ```
 
 #### `%>%` or `|>`?
 
 The cheatsheet examples use the pipe provided by the `magrittr` package, `%>%` (the `magrittr` pipe is imported as part of the `tidyverse`). As of 2021, R [version 4.1.0](https://stat.ethz.ch/pipermail/r-announce/2021/000670.html) (codename "Camp Pontanezen") was released with a native pipe (`|>`). We're going to demonstrate using both because of reasons [better explained elsewhere.](https://r4ds.hadley.nz/workflow-pipes.html#vs) The important thing to understand about pipes is how they restructure multiple function calls.
 
-Use the code block below to experiment with pipes: 
+Use the code block below to experiment with pipes on the `x` vector:
 
 ```{r prepare-pipes, echo=FALSE}
 x <- c(8.3, 3.14, 28.0001, 11.75)
 ```
 
-
-```{r test-pipes, exercise=TRUE, exercise.lines=10, exercise.setup="prepare-pipes"}
+```{r test-pipes, exercise=TRUE, exercise.lines=11, exercise.setup="prepare-pipes"}
 # view x
 
 # use %>% to get the mean() of x
@@ -141,23 +135,382 @@ x <- c(8.3, 3.14, 28.0001, 11.75)
 
 # use |> to get the mean() and round() the output to 1 digit
 
+
 ```
 
-
-If you're using RStudio, you can set which pipe you'd like to use under **Tools** > **Global Options** > **Code**: *Use native pipe operator |> (requires R 4.1+*) 
+If you're using RStudio, you can set which pipe you'd like to use under **Tools** \> **Global Options** \> **Code**: *Use native pipe operator \|\> (requires R 4.1+*)
 
 ```{r set-pipe, echo=FALSE, fig.align='center', out.height='80%', out.width='80%'}
 knitr::include_graphics(path = "www/set-pipe.png")
 ```
 
-## Summarise Cases  
+## Summarise Cases
 
-## Group Cases 
+> *Apply summary functions to columns to create a new table of summary statistics. Summary functions take vectors as input and return one value.*
 
-## Manipulate Cases 
+One of the most common manipulations we perform on any dataset is a summary. As we've covered above, tidy data contains our variable in columns, the observations for these variables as rows, and at their intersection (i.e., the true contents of any dataset) are the values.
 
-## Manipulate Variables  
+This rectangular structure is helpful for storage and manipulation, but we typically need to condense the data into something more easily digestible (usually in the form of summary statistics).
+
+### summarise()
+
+In `dplyr`, the function for collapsing rows into a single number is `summarise()` (you can also use the American English version, `summarize()`).
+
+We're going to start with a simple example using the example `X` and `Y` datasets from page 2 of the cheatsheet. Use the code block below to explore `X` and `Y`.
+
+```{r prepare-xy-sum, echo=FALSE}
+X <- tribble(
+  ~a,  ~b,  ~c,
+  "a", "t", 1,
+  "b", "u", 2,
+  "c", "v", 3
+)
+X <- dplyr::mutate(X, 
+  across(where(is.double), as.double))
+Y <- tribble(
+  ~e,  ~f,  ~g,
+  "a", "t", 3,
+  "b", "u", 2,
+  "d", "W", 1
+)
+Y <- dplyr::mutate(Y, 
+  across(where(is.double), as.double))
+```
+
+```{r summarise-1, exercise=TRUE, exercise.lines=5, exercise.setup="prepare-xy-sum"}
+
+```
+
+We're going to summarize the numerical column `c` in table `X` using `dplyr`'s `summarise()` function in the code block below.
+
+1.  Supply `X` to the `.data` argument.
+2.  Provide the column we want to summarize (`c`) to the `…` argument using the `sum()` function to get the summation of the three numbers in `c` (i.e., as `sum(c)`):
+
+```{r summarise-2, exercise=TRUE, exercise.lines=5, exercise.setup="prepare-xy-sum"}
+# summarise(.data, sum())
+```
+
+The output is a new data frame/tibble summarizing all observations in the input. 
+
+### summary functions
+
+The figure below shows how we could create the same output without using `summarise()` and `sum()`:
+
+```{r summarise-01-png, echo=FALSE, fig.align='center', out.height='80%', out.width='80%'}
+knitr::include_graphics(path = "www/summarise-01.png")
+```
+
+As we can see, the column name in the output is identical to the code we've used to create the summary.
+
+```{r summarise-answer-2, echo=FALSE}
+X <- tribble(
+  ~a,  ~b,  ~c,
+  "a", "t", 1,
+  "b", "u", 2,
+  "c", "v", 3
+)
+X <- dplyr::mutate(X, 
+  across(where(is.numeric), as.double))
+summarise(X, sum(c))
+```
+
+If we'd like to provide a name for the summary column, we can do so using the following syntax:
+
+```r
+summarise(.data = <data>,
+  column_name = summary_function(<variable>)
+)
+```
+
+This essentially assigns the summary variable to a one-column tibble. Use the code block below to create a summary of column `c` in dataset `X` and name this column `c_sum`: 
+
+```{r summarise-3, exercise=TRUE, exercise.lines=5, exercise.setup="prepare-xy-sum"}
+# summarise(.data, 
+#  = sum(c))
+```
+
+We can use the code block below to see if the output from `summarise()` is identical to the output from `tibble()`:
+
+```{r summarise-4, exercise=TRUE, exercise.lines=8, exercise.setup="prepare-xy-sum"}
+# save the output below to 'z'
+# summarise(.data = X, c_sum = sum(c))
+identical(
+  # place 'z' in argument x
+  x = 
+  y = tibble(c_sum = sum(1, 2, 3)))
+```
+
+### named summary functions
+
+The figure below gives us an idea on how the output is created when we call `summarise()` and provide a name for the new column.
+
+```{r summarise-02-png, echo=FALSE, fig.align='center', out.height='80%', out.width='80%'}
+knitr::include_graphics(path = "www/summarise-02.png")
+```
+
+**NOTE**: The function we use inside `summarise()` must be capable of reducing the column contents into a single number. 
+
+### count()
+
+`dplyr` has a handy function for counting the number of observations, `count()`. The `count()` function returns a new data frame/tibble with the counts (or tally) of all observations. We've created a test dataset, `Z`, to practice using `count()` (below).
+
+```{r prepare-z-count, echo=FALSE}
+Z <- tribble(
+   ~x, ~y,  ~z,
+  "d",  4, "l",
+  "d",  5, "m",
+  "e",  6, "m"
+  )
+```
+
+```{r view-z, echo=FALSE}
+Z <- tribble(
+   ~x, ~y,  ~z,
+  "d",  4, "l",
+  "d",  5, "m",
+  "e",  6, "m"
+  )
+gt::gt(Z)
+```
+
+
+Use the code block below to count the `z` column in the `Z` dataset. 
+
+```{r count-1, exercise=TRUE, exercise.lines=4, exercise.setup="prepare-z-count"}
+# count the observations in the z column of the Z dataset
+```
+
+
+### tallying values 
+
+With `dplyr::count()`, each value in the column(s) provided to `x` is tallied up and returned under column `n`:
+
+```{r count-01-png, echo=FALSE, fig.align='center', out.height='80%', out.width='80%'}
+knitr::include_graphics(path = "www/count-01.png")
+```
+
+## Group Cases
+
+> *Use `group_by(.data, …, .add = FALSE, .drop = TRUE)` to create a "grouped" copy of a table grouped by columns in `...`.  `dplyr` functions will manipulate each "group" separately and combine the results.*
+
+In the previous exercise, we covered the `count()` function. `count()` takes a dataset and specified column(s) and returns a tibble containing the 'counts' for each column value under a new `n` column. The `count()` output is created by 'grouping' the dataset by the column provided to `x`, and then summarizing it's values with `summarise(n = n())`:
+
+```{r identical-count-group_by-summarise}
+identical(
+  x = count(Z, z), 
+  y = group_by(Z, z) |> summarise(n = n()))
+```
+
+
+Below we've loaded the `sw_groups` dataset, which is a subset of the [starwars data from the `dplyr` package](https://dplyr.tidyverse.org/reference/starwars.html), for this section. Use the code block below to explore:
+
+```{r prepare-sw_groups, echo=FALSE}
+sw_groups <- cheatsheetR::sw_groups
+```
+
+```{r explore-sw_groups, exercise=TRUE, exercise.lines=4, exercise.setup="prepare-sw_groups"}
+
+```
+
+The variables in `sw_groups` contain attributes for characters in the Star Wars films. We're going to use `group_by()` to explore how these variables differ by 'groups'. 
+
+### grouped data structure 
+
+Before we summarise the values in `sw_groups`, we're going to view the structure of a grouped dataset. 
+
+In the code block below, we've piped the `sw_groups` to the `group_by()` function. Add the `sex` variable, and view the structure of this new object using `str()`. 
+
+```{r prepare-sw_groups-str, echo=FALSE}
+sw_groups <- cheatsheetR::sw_groups
+```
+
+```{r group-str, exercise=TRUE, exercise.lines=5, exercise.setup="prepare-sw_groups"}
+# group sw_groups by sex and view the str()
+sw_groups |> group_by()
+```
+
+`group_by()` returns a `grouped_df` object, but retains the tibble structures as well (`tbl_df/tbl/data.frame`). The `grouped_df` object gives us the ability to perform specialized operations when we combine it with `summarise()`.
+
+```{r sw_species_grouped, echo=FALSE, include=FALSE}
+sw_species_grouped <- sw_groups |> group_by(species)
+str(attr(x = sw_species_grouped, which = "groups"))
+```
+
+### grouped summaries
+
+What if we wanted to calculate the average height by sex in the `sw_groups`? 
+
+First we supply the `sex` column to `group_by()`, and then `summarise()` the `ht` column using the `mean()` function. 
+
+Use the code block below and complete grouped summary: 
+
+```{r prepare-sw_groups-sum-mean, echo=FALSE}
+sw_groups <- cheatsheetR::sw_groups
+```
+
+```{r group-sum-mean, exercise=TRUE, exercise.lines=5, exercise.setup="prepare-sw_groups-sum-mean"}
+sw_groups |> 
+  # group sw_groups by sex 
+   group_by(___) |> 
+  # calculate the mean height
+   summarise(mean(___))
+
+```
+
+As we can see, combining `group_by()` and `summarise()` allows us to apply functions to columns and answer questions like, "*what is the average mass per home?*" or "*what is the maximum height per species?*"
+
+```{r group-by-summarise-01, echo=FALSE, fig.align='center', out.height='80%', out.width='80%'}
+knitr::include_graphics(path = "www/group-by-summarise-01.png")
+```
+
+### named grouped summaries
+
+We can also give the grouped summaries names (like using `summarise()` in isolation). Use the code block below to name the grouped `mean()` of the `ht` column `avg_ht`. 
+
+```{r group-sum_y-mean, exercise=TRUE, exercise.lines=5, exercise.setup="prepare-sw_groups-sum-mean"}
+sw_groups |> 
+  # group sw_groups by sex 
+   group_by(sex) |> 
+  # name and calculate the mean height
+   summarise(___ = mean(___))
+```
+
+As we can see, naming the summary is a bit like creating a tibble with the unique (or distinct) values of the grouped column (`Z$z`), and performing the summarizing function on each set of grouped values (`sum()` in this case):
+
+```{r group-by-summarise-02, echo=FALSE, fig.align='center', out.height='85%', out.width='85%'}
+knitr::include_graphics(path = "www/group-by-summarise-02.png")
+```
+
+## Multiple Group Summaries 
+
+We'll often want to create more than a single grouped summary for our data. A common set of numbers is the [five-number summary](https://en.wikipedia.org/wiki/Five-number_summary), which consists of the lowest value (`min()`), the lower quartile (`quantile(x, 0.25)`), the middle value (`median()`), the upper quartile (`quantile(x, 0.75)`), and the highest value (`max()`).
+
+We've loaded another subset of the starwars dataset as `sw_summary` for these exercises. Use the code block below to explore:
+
+```{r prepare-sw_summary, echo=FALSE}
+sw_summary <- cheatsheetR::sw_summary
+```
+
+```{r explore-sw_summary, exercise=TRUE, exercise.lines=3, exercise.setup="prepare-sw_summary"}
+
+```
+
+### five number summary
+
+We're going to create a five number summary for the `mass` variable grouped by `gender`. We'll start with minimum value and the lower quartile.
+
+```{r five-number-summ-min-low_q_mass, exercise=TRUE, exercise.lines=9, exercise.setup="prepare-sw_summary"}
+# switching pipes! 
+sw_summary %>% 
+  # group by gender
+  group_by(______) %>% 
+    summarise(
+      # minimum using min(x)
+      min_mass = , 
+      # lower quantile using quantile(x, 0.25)
+      low_q_mass = )
+```
+
+#### dealing with missing values 
+
+You may be encountering an error message (***"Problem while computing `low_q_mass = quantile(mass, 0.25)`"***). We're seeing this error because of the missing values (`NA`) in `gender` and `mass`. We can remove the missing values from the calculation using `na.rm = TRUE`. 
+
+Finish the five-number summary in the code block below (we've started it for you):
+
+```{r five-number-summ-all, exercise=TRUE, exercise.lines=14, exercise.setup="prepare-sw_summary"}
+# finish removing the missing (NA) values from mass
+sw_summary %>% 
+  # group by gender
+  group_by(______) %>% 
+    summarise(
+      min_mass = min(mass, na.rm = TRUE),
+      low_q_mass = quantile(mass, 0.25, na.rm = TRUE),
+      # median using median(x)
+      med_mass = ,
+      # lower quantile usiing quantile(x, 0.75)
+      up_q_mass = ,
+      # maximum using max(x)
+      max_mass =
+      )
+```
+
+There are other methods for creating five-number summaries (see the [`fivenum` function](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/fivenum.html) and the [`skimr` package](https://docs.ropensci.org/skimr/)).
+
+### grouping and re-shaping
+
+[In previous tutorials](https://mjfrigaard.shinyapps.io/tidyr-p1/) we've covered `tidyr`'s pivoting functions (`pivot_longer()` and `pivot_wider()`). We can use these functions to reshape the output table from grouped summaries. 
+
+We'll start with `count()`. Below we've counted the `gender` and `hair` variables in `sw_summary`. 
+
+```{r prepare-sw_summary-count, echo=FALSE}
+sw_summary <- cheatsheetR::sw_summary
+```
+
+```{r count-gender-hair, eval=FALSE}
+sw_summary %>%
+  count(gender, hair)
+```
+
+```{r , echo=FALSE}
+sw_summary <- cheatsheetR::sw_summary
+sw_summary %>%
+  count(gender, hair)
+```
+
+
+This output is a little long, so we want to convert it into a cross-tabulation display, with the values of `gender` making up the column names, and the counts for `hair` making up the cell counts. We can do this by pivoting the output from count into a wide format with `tidyr::pivot_wider()` (review it [here](https://mjfrigaard.shinyapps.io/tidyr-p1/#section-reshape-data)). 
+
+In the code block below, assign `gender` to the `names_from` argument, and `n` to `values_from`:
+
+```{r pivot_wider-count, exercise=TRUE, exercise.lines=5, exercise.setup="prepare-sw_summary-count"}
+sw_summary %>%
+  count(gender, hair) %>% 
+  pivot_wider(names_from = ______, 
+              values_from = _)
+```
+
+This display allows us to look up the counts of hair color by `gender` (and see which values are missing).
+
+Let's try another example!
+
+Below we're going to calculate some summary statistics for the mass and height variables. We'll get the mean and standard deviation, grouped by `gender`, but then convert the output into a long (tidy) format using the `tidyr::pivot_longer()` function. Complete the `group_by()` and `summarise()` functions, the store the new summary column names in `'stat'` and the new summary values in `'value'`. 
+
+```{r pivot_longer-summarise, exercise=TRUE, exercise.lines=16, exercise.setup="prepare-sw_summary-count"}
+sw_summary %>% 
+  # group by gender
+  group_by(______) %>% 
+  # get mean and sd for mass and ht
+  summarise(
+    mean_mass = mean(___, na.rm = TRUE), 
+    mean_ht = mean(__, na.rm = TRUE), 
+    sd_mass = sd(____, na.rm = TRUE),
+    sd_ht = sd(__, na.rm = TRUE)
+  ) %>% 
+  # convert to tidy format 
+  pivot_longer(cols = -gender, 
+               # new column names
+              names_to = ______, 
+              # new column values 
+              values_to = _______)
+```
 
 
 
 
+## Manipulate Cases
+
+### Extract Cases
+
+> *Row functions return a subset of rows as a new table.*
+
+### Arrange cases
+
+### Add cases
+
+## Manipulate Variables
+
+### Extract variables
+
+### Manipulate multiple variables at once
+
+### Make new variables 
